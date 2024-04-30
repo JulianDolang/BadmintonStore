@@ -7,39 +7,87 @@
     <title>(NamaToko)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"     />
   </head>
 
   <body>
+    <div class="overlay" id="modal">
+      <div class="modal">
+        <div class="flex-end">
+          <button style="font-size: large; padding: 5px; border: 1px solid #000;" onclick="closeForm()">
+            X
+          </button>
+        </div>
+        <form action="/action_page.php" class="form-container">
+          <h1>Login</h1>
+          
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+          
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          
+          <button type="submit" class="btn" style="width: 30%;   padding: 10px;  border: 1px solid #ccc;
+          border-radius: 5px;
+        
+          " >Login</button>
+        </form>
+      </div>
+    </div>
+
 
     <!-- NavBar -->
-      <div class="search-bar"><i class="bi bi-search"></i>
-        <input class="search" type="text" name="search" placeholder="Ketik Untuk Mencari Produk" value="" autocomplete="off" autocomplete2="off" data-listener-added_66b1dd13="true"> 
-       </div>
     <nav class="navbar">
-      <div class="logo">
-        <i class="fa-solid fa-font-awesome"></i>
-        <a href="#">LOGO</a>
-      </div>
-
-      <div class="menu">
-        <div class="menu-links">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Buy</a>
-          <a href="#">Service</a>
-          <a href="contact.html">Contact</a>
+      <div class="navbar-top">
+        <div class="logo">
+          <h1>LOGO</h1>
         </div>
-        <button class="log-in">Log In</button>
+        <div class="end">
+          <div class="search-bar">
+            <input class="search-input" type="text">
+          </div>
+          <div class="navbar-button">
+            <i class="bi bi-person-circle" onclick="showForm()"></i>
+            <i class="bi bi-cart"></i>
+          </div>
+        </div> 
       </div>
-      <div class="menu-btn">
-        <i class="fa-solid fa-bars"></i>
+      <div class="navigation-button">
+        <ul>
+          <li>
+            <a href="">HOME</a>
+          </li>
+          <li>
+            <a href="">ABOUT US</a>
+          </li>
+          <li>
+            <a href="">BUY</a>
+          </li>
+          <li>
+            <a href="">SERVICE</a>
+          </li>
+          <li>
+            <a href="">CONTACT US</a>
+          </li>
+        </ul>
       </div>
     </nav>
     <!-- NavBar End -->
 
-    <div class="hero-section">
-        <h1>Welcome to our E-Commerce Store</h1>
-    </div>
+    <div class="home" id="home">
+      <div class="swiper home-slid">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide box">
+                  <div class="image">
+                      <img src="https://source.unsplash.com/random/1850x500" alt="image">
+                  </div>
+                  <div class="content">
+                      <h2>Welcome to our E-Commerce Store</h2>
+                  </div>
+              </div>
+          </div>
+        </div>
+  </div>
 
 
     <!-- Product Card -->
@@ -47,7 +95,7 @@
         <div class="product-card">
             <img src="https://source.unsplash.com/random/200x300" class="product-image">
             <h2 class="product-title">Product 1</h2>
-            <p class="product-price">$Rp.???</p>
+            <p class="product-price">Rp.???</p>
         </div>
         <div class="product-card">
             <img src="https://source.unsplash.com/random/200x300" class="product-image">
@@ -61,6 +109,8 @@
         </div>
     </div>
     <!-- Product Card End -->
+<script src="script.js">
 
+</script>
 </body>
 </html>
