@@ -59,10 +59,10 @@
             <a href="index.html">HOME</a>
           </li>
           <li>
-            <a href="">ABOUT US</a>
+            <a href="about-us.html">ABOUT US</a>
           </li>
           <li>
-            <a href="">BUY</a>
+            <a href="buy.html">BUY</a>
           </li>
           <li>
             <a href="">SERVICE</a>
@@ -75,7 +75,6 @@
     </nav>
     <!-- NavBar End -->
 
-    <h1>Contact Us</h1>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -84,10 +83,12 @@
         background-color: #fff5e0;
       }
 
-      .container {
-        width: 80%;
-        margin: 0 auto;
+      .main-container {
+        width: 60%;
+        margin: 100px auto;
+        margin-bottom: 300px;
         padding: 20px;
+        background-color: white;
       }
 
       h1 {
@@ -116,7 +117,7 @@
         background-color: #003d6b;
       }
 
-      .container {
+      .main-container  .content {
         max-width: 800px;
         margin: 20px auto;
         padding: 20px;
@@ -124,7 +125,7 @@
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         font-size: 24px;
-      }
+        }
 
         .contact-option {
             margin-top: 30px;
@@ -193,33 +194,33 @@
         }
     </style>
   
-    <div class="container">
+    <div class="main-container">
       <h3>Contact Us</h3>
       <h1>  We're Here For You</h1>
       <p>Weekday    : 07.00 - 17.00<br>
       Weekend   : 08.00 - 16.00<br></p>
-      <div class="container">
-        <div class="contact-option">
+        <div class="content">
+          <div class="contact-option">
             <button class="btn btn-call" onclick="toggleCall()">Call</button>
             <button class="btn btn-message" onclick="toggleMessageBox()">Message</button>
             <button class="btn btn-address" onclick="toggleAddress()">Address</button>
-        </div>
-        <div class="message-box" id="message-box">
+          </div>
+          <div class="message-box" id="message-box">
             <input type="email" id="email" name="email" required placeholder="Email">
             <textarea class="message-input" required placeholder="Type your message here..."></textarea>
             <input type="submit" value="Send Message">
-        </div>
-        <div class="Call" id="Call">
+          </div>
+          <div class="Call" id="Call">
             <h3>Our Call Center :</h3>
             <p>0819-0428-3345</p>
-        </div>
-        <div class="address" id="address">
+          </div>
+          <div class="address" id="address">
             <h3>Our Location :</h3>
             <p>Idola Sport</p>
             <p>Jl. Kyai Mojo No.73, Bumijo, Kec. Jetis, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55231</p>
             <p>https://maps.app.goo.gl/eCtiarFxGYBbgyFf8</p>
+          </div>
         </div>
-    </div>
       <script>
         function toggleCall() {
             var Call = document.getElementById("Call");
@@ -251,5 +252,47 @@
         }
       </script>
     </div>
+
+<footer class="footer">
+    <div class="footer1">
+          <h1>VICTORIA.<span>Sport</span></h1>
+    </div>
+    <div class="footer2">
+      <div class="logo-footer">
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-youtube"></i>
+      </div>
+    </div>
+    <div class="footer3">
+        <ul>
+          <li>
+            <a href="">RACKETS</a>
+          </li>
+          <li>
+            <a href="">SHOES</a>
+          </li>
+          <li>
+            <a href="">STRINGS</a>
+          </li>
+          <li>
+            <a href="">SHUTTLECOCKS</a>
+          </li>
+          <li style="border: none ;">
+            <a href="">ACCESSORIES</a>
+          </li>
+        </ul>
+    </div>
+    <div class="footer4">
+      <div class="footer-start">
+        
+      </div>
+      <div class="footer-end">
+        
+      </div>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
   </body>
 </html>
