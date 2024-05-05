@@ -75,27 +75,131 @@
     </nav>
     <!-- NavBar End -->
 
-
-    <main>
-      <section class="about-us">
-          <div class="container">
-              <h2>About Us</h2>
-              <p>adalah toko olahraga terdepan di Central Java yang khusus menyediakan perlengkapan badminton berkualitas tinggi. Kami berkomitmen untuk memberikan pelayanan terbaik bagi para pecinta badminton di semua tingkatan, mulai dari pemula hingga profesional. </p>
-              <div class="pictures">
-                  <img src="https://source.unsplash.com/random" alt="Image 1" class="pictures">
-              </div>
-              <div class="pictures">
-                  <img src="https://source.unsplash.com/random" alt="Image 2" class="pictures">
-              </div>
-              <p>Kami menawarkan berbagai macam produk badminton dari merek ternama, seperti Yonex, Victor, Li-Ning, dan Mizuno. Produk-produk kami meliputi raket, kok, sepatu, baju, tas, dan aksesoris lainnya. Kami juga menyediakan layanan restringing raket dengan tenaga ahli yang berpengalaman.</p>
+      <div class="product">
+        <section class="product-categories">
+          <h2>PRODUCT KATEGORIES</h2>
+          <div class="categories">
+            <div class="category-item">
+              <img src="https://source.unsplash.com/random" alt="Rackets" class="product-image">
+              <h4 class="nama-produk"> Rackets</h4>
+            </div>
+            <div class="category-item">
+              <img src="https://source.unsplash.com/random" alt="Strings" class="product-image">
+              <h4>Strings</h4>
+            </div>
+            <div class="category-item">
+              <img src="https://source.unsplash.com/random" alt="Grips" class="product-image">
+              <h4>Grips</h4>
+            </div>
+            </div>
+            <div class="categories">
+            <div class="category-item">
+              <img src="https://source.unsplash.com/random" alt="Shuttlecocks" class="product-image">
+              <h4>Shuttlecocks</h4>
+            </div>
+            <div class="category-item">
+              <img src="https://source.unsplash.com/random" alt="Bags" class="product-image">
+              <h4>Badminton Bags</h4>
+            </div>
+            <div class="category-item">
+              <img src="https://source.unsplash.com/random" alt="Footwear" class="product-image">
+              <h4>Footwear</h4>
+            </div>
           </div>
-      </section>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <p>SPORT</p>
+      </div>
+    </footer>
+  </body>
+</html>
 
-      <section class="alamat">
-          <div class="container">
-              <h2>Alamat</h2>
-              <p>Jl. Kyai Mojo No.73, Bumijo, Kec. Jetis, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55231</p>
-          </div>
-      </section>
-  </main>
+<style>
+  body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #102c57;
+  padding: 20px 0;
+}
+
+.product {
+  display: flex;
+  overflow-x: scroll;
+  justify-content: center;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.category-item {
+  width: 200px;
+  height: 300px;
+  background-color: white;
+  margin: 10px;
+}
+
+.product-image {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.nama-produk {
+  margin: 10px;
+  font-size: 1.2rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+}
+
+.branding {
+  text-align: right;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+nav {
+  background-color: #dac0a3;
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+}
+</style>

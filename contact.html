@@ -7,44 +7,249 @@
     <title>(NamaToko)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"     />
   </head>
 
   <body>
+    <div class="overlay" id="modal">
+      <div class="modal">
+        <div class="flex-end">
+          <button style="font-size: large; padding: 5px; background-color: #153448; color: #DFD0B8;" onclick="closeForm()">
+            X
+          </button>
+        </div>
+        <form action="/action_page.php" class="form-container"> 
+          <h1>Login</h1>
+          
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+          
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+        
+        <div class="login-button">
+          <button type="submit" class="btn" style="width: 30%;   padding: 10px;  border: 1px solid #ccc; border-radius: 5px; background-color:#DFD0B8; margin: 0 28px;" >Login</button>
+          
+          <a href="#" class="btn" style="width: 30%;   padding: 10px;  border: 1px solid #ccc; border-radius: 5px; background-color:#DFD0B8; margin: 0 28px;color: #000; display: flex; justify-content: center;"> Sign Up </a>
+        </div>
+        </form>
+      </div>
+    </div>
+
 
     <!-- NavBar -->
     <nav class="navbar">
-      <div class="logo">
-        <i class="fa-solid fa-font-awesome"></i>
-        <a href="#">LOGO</a>
-      </div>
-      <div class="menu">
-        <div class="menu-links">
-          <a href="index.html">Home</a>
-          <a href="about-us.html  ">About</a>
-          <a href="#">Buy</a>
-          <a href="#">Service</a>
-          <a href="contact.html">Contact</a>
+      <div class="navbar-top">
+        <div class="logo">
+          <h1>VICTORIA.<span>Sport</span></h1>
         </div>
-        <button class="log-in">Log In</button>
+        <div class="end">
+          <div class="search-bar">
+            <input class="search-input" type="text">
+          </div>
+          <div class="navbar-button">
+            <i class="bi bi-person-circle" onclick="showForm()" ></i>
+            <i class="bi bi-cart"></i>
+          </div>
+        </div> 
       </div>
-      <div class="menu-btn">
-        <i class="fa-solid fa-bars"></i>
+      <div class="navigation-button">
+        <ul>
+          <li>
+            <a href="index.html">HOME</a>
+          </li>
+          <li>
+            <a href="">ABOUT US</a>
+          </li>
+          <li>
+            <a href="">BUY</a>
+          </li>
+          <li>
+            <a href="">SERVICE</a>
+          </li>
+          <li style="border: none;">
+            <a href="contact.html">CONTACT US</a>
+          </li>
+        </ul>
       </div>
     </nav>
     <!-- NavBar End -->
 
+    <h1>Contact Us</h1>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff5e0;
+      }
+
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #333;
+      }
+      
+      form {
+        margin-top: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="submit"] {
+        background-color: #00529b;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #003d6b;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 24px;
+      }
+
+        .contact-option {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .btn-call,
+        .btn-message {
+            background-color: #00529b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-address {
+            background-color: #00529b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-call:hover{
+            background-color: #003d6b;
+        }
+
+        .btn-message:hover{
+            background-color: #003d6b;
+        }
+        .btn-address:hover {
+            background-color: #003d6b;
+        }
+        .Call {
+            display: none;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .message-box {
+            display: none;
+            margin-top: 20px;
+        }
+        .message-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .address {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+  
     <div class="container">
-      <h1>Contact Us</h1>
-      <p>(jadwal buka toko)</p>
-      <p>(nomor kontak)</p>
-      <form action="/submit_form" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-        <input type="submit" value="Send Message">
-      </form>
-</body>
+      <h3>Contact Us</h3>
+      <h1>  We're Here For You</h1>
+      <p>Weekday    : 07.00 - 17.00<br>
+      Weekend   : 08.00 - 16.00<br></p>
+      <div class="container">
+        <div class="contact-option">
+            <button class="btn btn-call" onclick="toggleCall()">Call</button>
+            <button class="btn btn-message" onclick="toggleMessageBox()">Message</button>
+            <button class="btn btn-address" onclick="toggleAddress()">Address</button>
+        </div>
+        <div class="message-box" id="message-box">
+            <input type="email" id="email" name="email" required placeholder="Email">
+            <textarea class="message-input" required placeholder="Type your message here..."></textarea>
+            <input type="submit" value="Send Message">
+        </div>
+        <div class="Call" id="Call">
+            <h3>Our Call Center :</h3>
+            <p>0819-0428-3345</p>
+        </div>
+        <div class="address" id="address">
+            <h3>Our Location :</h3>
+            <p>Idola Sport</p>
+            <p>Jl. Kyai Mojo No.73, Bumijo, Kec. Jetis, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55231</p>
+            <p>https://maps.app.goo.gl/eCtiarFxGYBbgyFf8</p>
+        </div>
+    </div>
+      <script>
+        function toggleCall() {
+            var Call = document.getElementById("Call");
+            if (Call.style.display === "none") {
+                Call.style.display = "block";
+            } else {
+                Call.style.display = "none";
+            }
+        }
+      </script>
+      <script>
+        function toggleMessageBox() {
+            var messageBox = document.getElementById("message-box");
+            if (messageBox.style.display === "none") {
+                messageBox.style.display = "block";
+            } else {
+                messageBox.style.display = "none";
+            }
+        }
+      </script>
+      <script>
+        function toggleAddress() {
+            var address = document.getElementById("address");
+            if (address.style.display === "none") {
+                address.style.display = "block";
+            } else {
+                address.style.display = "none";
+            }
+        }
+      </script>
+    </div>
+  </body>
 </html>
