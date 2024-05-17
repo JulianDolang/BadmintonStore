@@ -1,60 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(NamaToko)</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"     />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MG.Sport</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Alpine js -->
+ 
+
+    <!-- App -->
   </head>
-
-<!-- Ini Komentar -->
-<!-- Ini Komentar ke 2 -->
-
+  
+  <!-- Ini Komentar -->
+  <!-- Ini Komentar ke 2 -->
+  
   <body>
     <div class="overlay" id="modal">
       <div class="modal">
         <div class="flex-end">
-          <button style="font-size: large; padding: 5px; background-color: #153448; color: #DFD0B8;" onclick="closeForm()">
+          <button
+          style="
+              font-size: large;
+              padding: 5px;
+              background-color: #153448;
+              color: #dfd0b8;
+              "
+            onclick="closeForm()"
+          >
             X
           </button>
         </div>
-        <form action="/action_page.php" class="form-container"> 
+        <form action="/action_page.php" class="form-container">
           <h1>Login</h1>
           
           <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required>
-          
+          <input type="text" placeholder="Enter Email" name="email" required />
+
           <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-        
-        <div class="login-button">
-          <button type="submit" class="btn" style="width: 30%;   padding: 10px;  border: 1px solid #ccc; border-radius: 5px; background-color:#DFD0B8; margin: 0 28px;" >Login</button>
-          
-          <a href="#" class="btn" style="width: 30%;   padding: 10px;  border: 1px solid #ccc; border-radius: 5px; background-color:#DFD0B8; margin: 0 28px;color: #000; display: flex; justify-content: center;"> Sign Up </a>
-        </div>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
+
+          <div class="login-button">
+            <button
+              type="submit"
+              class="btn"
+              style="
+                width: 30%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background-color: #dfd0b8;
+                margin: 0 28px;
+              "
+            >
+              Login
+            </button>
+
+            <a
+              href="#"
+              class="btn"
+              style="
+                width: 30%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background-color: #dfd0b8;
+                margin: 0 28px;
+                color: #000;
+                display: flex;
+                justify-content: center;
+              "
+            >
+              Sign Up
+            </a>
+          </div>
         </form>
       </div>
     </div>
 
+    <div id="shopping-cart-wrapper">
+      <!-- Shopping Cart -->
+      <div class="cart-button" x-data>
+          <template x-for="(item, index) in $store.cart.items" x-keys="index">
+              <div class="cart-tem">
+                  <img :src="images/product-image/${item.img}`" :alt="item.name">
+                  <div class="item-detail">
+                      <h3 x-text="item.name"></h3>
+                      <div class="item-price">
+                          <span x-text="formatRupiah(item.price)"></span> &times;
+                          <button id="remove">&minus;</button>
+                          <span x-text="item.quantity"></span>
+                          <button id="add">&plus;</button>&equals;
+                          <span x-text="item.total"></span>
+                      </div>
+                  </div>
+              </div>
+          </template>
+      </div>
+    </div>
+      <!-- Shopping Cart end -->
 
     <!-- NavBar -->
     <nav class="navbar">
       <div class="navbar-top">
         <div class="logo">
-          <h1>VICTORIA.<span>Sport</span></h1>
+          <h1>MG.<span>Sport</span></h1>
         </div>
         <div class="end">
           <div class="search-bar">
-            <input class="search-input" type="text">
+            <input class="search-input" type="text" />
           </div>
-          <div class="navbar-button">
-            <i class="bi bi-person-circle" onclick="showForm()" ></i>
-            <i class="bi bi-cart"></i>
+          <div class="navbar-button" x-data>
+            <i class="bi bi-person-circle" onclick="showForm()"></i>
+          <div id="cart-button">
+            <i class="bi bi-cart"></i><span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
           </div>
-        </div> 
+          </div>
+        </div>
       </div>
       <div class="navigation-button">
         <ul>
@@ -67,10 +143,7 @@
           <li>
             <a href="buy.html">BUY</a>
           </li>
-          <li>
-            <a href="">SERVICE</a>
-          </li>
-          <li style="border: none;">
+          <li style="border: none">
             <a href="contact.html">CONTACT US</a>
           </li>
         </ul>
@@ -79,62 +152,58 @@
     <!-- NavBar End -->
 
     <div class="home" id="home">
-      <div class="swiper home-slid">
-          <div class="swiper-wrapper">
-              <div class="swiper-slide box">
-                  <div class="image">
-                      <img src="https://source.unsplash.com/random/1850x500" alt="image">
-                  </div>
-                  <div class="content">
-                      <h2>Welcome to our E-Commerce Store</h2>
-                  </div>
-              </div>
+      <div class="home-slid">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+            <div class="image">
+              <img src="image/background (1).jpg" alt="image" />
+            </div>
+            <div class="content">
+              <h2>Welcome to our E-Commerce Store</h2>
+            </div>
           </div>
         </div>
-  </div>
-
+      </div>
+    </div>
 
     <!-- Product Card -->
 
     <div class="onsale-heading">
-      <h2 class="onsale-title"> Product OnSale</h2>
+      <h2 class="onsale-title">Product OnSale</h2>
     </div>
-    <div class="product-container">
+    <div class="product-container" id="product-container" x-data="product_container">
+      <template x-for="(item, index) in items" x-key="index">
         <div class="product-card">
-            <img src="https://www.yonex.com/media/catalog/product/3/a/3ax88d-t_076-1_02.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300" class="product-image">
-            <h2 class="product-price">Rp.???</h2>
-            <p class="product-title">Product 1</p>
-            <p class="product-desc">Deskripsi Product</p> 
+          <img
+            :src="`image/product-image/${item.img}`"
+            class="product-image"
+            alt="${item.name}"
+            />
+            <p
+            class="product-price"
+            x-text="formatRupiah(item.price.toString(), 'Rp')"
+          ></p>
+          <p class="product-title" x-text="item.name"></p>
+          <div class="button">
+            <a href="#" @click.prevent="$store.cart.add(item)" class="btn">add to cart</a>
+          </div>
         </div>
-        <div class="product-card">
-            <img src="https://www.yonex.com/media/catalog/product/3/a/3ax88s-t_417-1_02.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300" class="product-image">
-            <h2 class="product-price">Rp.???</h2>
-            <p class="product-title">Product 2</p>
-            <p class="product-desc">Deskripsi Product</p>
-
-        </div>
-        <div class="product-card">
-            <img src="https://www.yonex.com/media/catalog/product/3/a/3ax88s-t_417-1_02.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300" class="product-image">
-            <h2 class="product-price">Rp.???</h2>
-            <p class="product-title">Product 3</p>
-            <p class="product-desc">Deskripsi Product</p>
-
-        </div>
+      </template>
     </div>
     <!-- Product Card End -->
 
-  <footer class="footer">
-    <div class="footer1">
-          <h1>VICTORIA.<span>Sport</span></h1>
-    </div>
-    <div class="footer2">
-      <div class="logo-footer">
-        <i class="bi bi-facebook"></i>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-youtube"></i>
+    <footer class="footer">
+      <div class="footer1">
+        <h1>MG.<span>Sport</span></h1>
       </div>
-    </div>
-    <div class="footer3">
+      <div class="footer2">
+        <div class="logo-footer">
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-youtube"></i>
+        </div>
+      </div>
+      <div class="footer3">
         <ul>
           <li>
             <a href="">RACKETS</a>
@@ -148,21 +217,18 @@
           <li>
             <a href="">SHUTTLECOCKS</a>
           </li>
-          <li style="border: none ;">
+          <li style="border: none">
             <a href="">ACCESSORIES</a>
           </li>
         </ul>
-    </div>
-    <div class="footer4">
-      <div class="footer-start">
-        
       </div>
-      <div class="footer-end">
-        
+      <div class="footer4">
+        <div class="footer-start"></div>
+        <div class="footer-end"></div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </body>
 </html>

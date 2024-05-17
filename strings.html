@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(NamaToko)</title>
+    <title>MG.Sports</title>
+    <link rel="icon" href="image/icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"     />
@@ -41,7 +42,7 @@
     <nav class="navbar">
       <div class="navbar-top">
         <div class="logo">
-          <h1>VICTORIA.<span>Sport</span></h1>
+          <h1>MG.<span>Sport</span></h1>
         </div>
         <div class="end">
           <div class="search-bar">
@@ -64,6 +65,9 @@
           <li>
             <a href="buy.html">BUY</a>
           </li>
+          <li>
+            <a href="">SERVICE</a>
+          </li>
           <li style="border: none;">
             <a href="contact.html">CONTACT US</a>
           </li>
@@ -74,41 +78,53 @@
 
       <div class="product">
         <section class="product-categories">
-          <h2>PRODUCT KATEGORIES</h2>
+          <h2>STRINGS</h2>
           <div class="categories">
-            <a class="category-item" href="racket.html">
-              <img src="https://www.yonex.com/media/catalog/product/3/a/3ax88-pl_076_1_02.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300" alt="Rackets" class="product-image">
-              <h4 style="padding-left: 50px;">Rackets</h4>
-            </a>
-            <a class="category-item" href="strings.html">
-              <img src="https://www.yonex.com/media/catalog/product/b/g/bgxb65_ex_pac.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300" alt="Strings" class="product-image">
-              <h4 style="padding-left: 50px;">Strings</h4>
-            </a>
-            <a class="category-item" href="accessories.html">
-              <img src="https://www.yonex.com/media/catalog/product/i/n/int_ac102-3_011-5.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300" alt="Grips" class="product-image">
-              <h4 style="padding-left: 30px;">Accessories</h4>
-            </a>
+            <div class="category-item">
+              <img src="image/product-image/StringLiNing.jpg" alt="Rackets" class="product-image">
+              <p>Senar Li-Ning</p>
+              <p>Rp.???</p>
+              <div class="button">
+                <a href="#" class="btn">add to cart</a>
+              </div>
+            </div>
+            <div class="category-item">
+              <img src="image/product-image/StringPowerace.jpg" alt="Strings" class="product-image">
+              <p>Senar Powerace</p>
+              <p>Rp.???</p>
+              <div class="button">
+                <a href="#" class="btn">add to cart</a>
+              </div>           
+            </div>
+            <div class="category-item">
+              <img src="image/product-image/StringYonex.jpg" alt="Grips" class="product-image">
+              <p>Senar Yonex</p>
+              <p>Rp.???</p>
+              <div class="button">
+                <a href="#" class="btn">add to cart</a>
+              </div>
+            </div>
           </div>
-          <div class="categories">
-            <a class="category-item" href="shuttlecocks.html">
+          <!-- <div class="categories">
+            <div class="category-item">
               <img src="https://www.yonex.com/media/catalog/product/a/e/aerosensa_40.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300" alt="Shuttlecocks" class="product-image">
               <h4 style="padding-left: 30px;">Shuttlecocks</h4>
-            </a>
-            <!-- <a class="category-item">
+            </div>
+            <div class="category-item">
               <img src="https://www.yonex.com/media/catalog/product/l/i/limited_pro_racquetbag_bag_1.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300" alt="Bags" class="product-image">
               <h4 style="padding-left: 15px;">Badminton Bags</h4>
-            </a> -->
-            <a class="category-item" href="footwear.html">
+            </div>
+            <div class="category-item">
               <img src="https://www.yonex.com/media/catalog/product/s/h/shbelz3m_navy-blue_1.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300" alt="Footwear" class="product-image">
               <h4 style="padding-left: 50px;">Footwear</h4>
-            </a>
-          </div>
+            </div>
+          </div> -->
         </section>
       </div>
     </main>
     <footer class="footer">
       <div class="footer1">
-            <h1>VICTORIA.<span>Sport</span></h1>
+            <h1>MG.<span>Sport</span></h1>
       </div>
       <div class="footer2">
         <div class="logo-footer">
@@ -149,7 +165,34 @@
 </html>
 
 <style>
-  body {
+
+
+.button{
+  display: flex;
+  justify-content: center;
+}
+
+.btn{
+    margin-top: 4px;
+    display: inline-block;
+    font-size: medium;
+    color: #fff;
+    background-color: #000;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 4px 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.btn:hover{
+    background-color: #dac0a3;
+    letter-spacing: 1px;
+}
+
+body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
@@ -170,7 +213,8 @@ header {
   display: flex;
   overflow-x: scroll;
   justify-content: center;
-  margin: 109px 0 0 0;
+  margin: 110px 0 0 0;
+  padding-bottom: 150px;
   overflow: hidden;
   background-color: #fff5e0;
 }
@@ -194,7 +238,7 @@ header {
 .product-image {
   width: 100%;
   height: 70%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .category-item h4 {
@@ -224,6 +268,8 @@ h1 {
 p {
   margin: 5px 0;
   font-size: 14px;
+  display: flex;
+  justify-content: center;
 }
 
 nav {
